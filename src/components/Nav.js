@@ -1,12 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const Nav = () => {
+const Nav = (props) => {
+    const {totalCost, cart} = props
+
     return (
+        
         <nav className='nav'>
-            <h3>Logo/Home</h3>
+            <h1>{totalCost}</h1>
+            <Link to="/">
+                <h3>Logo/Home</h3>
+            </Link>
             <ul className='nav-links'>
-                <li>Shop</li>
-                <li>Cart</li>
+                <Link to="/shop">
+                    <li>Shop</li>
+                </Link>
+                <Link to="/cart">
+                    <li>Cart {cart.length}</li>
+                </Link>
             </ul>
         </nav>
     )

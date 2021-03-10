@@ -2,9 +2,9 @@ import React from 'react'
 
 const Cart = () => {
     return (
-        <div>
+        <section className='cart'>
             <h1>Cart Page</h1>
-        </div>
+        </section>
     )
 }
 

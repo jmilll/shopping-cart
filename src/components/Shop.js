@@ -2,9 +2,10 @@ import React from 'react'
 
 const Shop = () => {
     return (
-        <div>
+        <section className='shop'>
             <h1>Shop Page</h1>
-        </div>
+            <p>shopee pagee</p>
+        </section>
     )
 }
 
