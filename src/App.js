@@ -5,20 +5,40 @@ import Cart from './components/Cart';
 import Nav from './components/Nav';
 import Shop from './components/Shop';
 import Home from './components/Home';
+import items from './components/shoppingItems'
 import {BrowserRouter as Router, Route, Switch,} from 'react-router-dom'
 
 
 
 const App = () => {
+
+  const test = [
+      {
+        id: 'big-leafy-boi',
+        name: 'Big Leafy Boi',
+        imgSource: 'big-leafy-boi.jpg',
+        quantity: 1,
+        price: 20,
+    },
+    {
+        id: 'small-leafy-boi',
+        name: 'Small Leafy Boi',
+        imgSource: 'small-leafy-boi.jpg',
+        quantity: 1,
+        price: 10,
+    }
+  ]
   const [cart, setCart] = useState([])
   const [showCart, setShowCart] = useState(false)
   const [totalCost, setTotalCost] = useState(0)
 
+  const [shoppingItems, setShoppingItems] = useState([...test])
   
   function incCost() {
     setTotalCost(prevTotalCost => prevTotalCost + 1)
     //setScore((prevScore) => prevScore + 1)
     console.log(totalCost)
+    //console.log(items)
   }
 
   function incCart() {
@@ -29,9 +49,38 @@ const App = () => {
   }
 
 
+  //const a = [...items]
+
+  useEffect(() => {
+    console.log('start useEffect...')
+    
+    console.log(items)
+    
+    console.log('preload shoppingitems =')
+    console.log(shoppingItems)
+
+    console.log('setting items...')
+    setShoppingItems(items)
+
+    console.log('new set items =')
+    console.log(shoppingItems)
+    
+    console.log('end useEffect...')
+  }, []);
+
+
+
   return (
     <Router>
       <div className="App">
+      {/* {items.map(item => {
+                return(
+                    <div key={item.id}>
+                        <p>{item.name}</p>
+                        <p>{item.price}</p>
+                    </div>
+                )
+            })} */}
 
         <button onClick={incCost}>+ Cost</button>
         <button onClick={incCart}>+ Cart</button>
@@ -46,10 +95,20 @@ const App = () => {
             exact path="/" 
             component={Home} 
           />
-          <Route 
+          <Route exact path="/shop">
+            <Shop items={items} />
+          </Route>
+          {/* <Route 
             path="/shop" 
-            component={Shop} 
-          />
+            component={Shop}
+            items={shoppingItems}
+              //items={[{items}]}
+              //storeItems={storeItems}
+              // render={(props) => (
+              //   <Shop {...props} items={items} />
+              // )}
+          /> */}
+          {/* { items.map((item) => { return <ShopItem {... item}/> }) } */}
           <Route 
             path="/cart" 
             component={Cart} 

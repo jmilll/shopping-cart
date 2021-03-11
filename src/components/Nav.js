@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Nav = (props) => {
     const {totalCost, cart} = props
-
+    //console.log(props)
     return (
         
         <nav className='nav'>
