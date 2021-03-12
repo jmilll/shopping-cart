@@ -4,12 +4,18 @@ import React from 'react'
 const Shop = (props) => {
     
     //const {items, testItems} = props
-    console.log(props.items)
-    console.log(props)
+   // console.log(props.items)
+   // console.log(props)
    //console.log('props = ' + props)
    // console.log('items = ' + items)
    // console.log('test = ' + testItems)
-   const {items} = props
+   const {items, addToCart} = props
+
+   const addToCart2 = () => {
+       console.log('add to cart')
+   }
+
+
 
     return (
         <section className='shop'>
@@ -24,6 +30,9 @@ const Shop = (props) => {
                     <div key={item.id}>
                         <p>{item.name}</p>
                         <p>{item.price}</p>
+                        {/* <button onClick={() => addToCart({name:item.name, id:item.id, price:item.price})}>Add To Cart</button> */}
+
+                        <button onClick={() => addToCart({...item})}>Add To Cart</button>
                     </div>
                 )
             })}
