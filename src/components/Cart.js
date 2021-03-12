@@ -3,7 +3,7 @@ import React from 'react'
 const Cart = (props) => {
     console.log('cart props below')
     console.log(props)
-    const { cart, addQuantity, addToCart } = props
+    const { cart, changeQuantity } = props
     console.log('cart deconstructed props below')
     console.log(cart)
     return (
@@ -15,8 +15,8 @@ const Cart = (props) => {
                     <div className={item.name} key={item.id}>
                         <p>{item.name}</p>
                         <p>{item.quantity}</p>
-                        <button onClick={() => console.log('minus')}>-</button>
-                        <button onClick={() => addQuantity(item.id)}>+</button>
+                        <button onClick={() => changeQuantity(item.id, -1)} disabled={item.quantity <2}>-</button>
+                        <button onClick={() => changeQuantity(item.id, 1)}>+</button>
                     </div>
                 )
             })}

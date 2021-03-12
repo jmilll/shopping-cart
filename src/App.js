@@ -52,7 +52,10 @@ const App = () => {
   //     }))
   // }
 
-  function handleIncrease (item) {
+  function changeQuantity (itemId, num) {
+    setCart(
+      cart.map((cartItem) => cartItem.id === itemId ? {...cartItem, quantity: cartItem.quantity + num } : cartItem)
+    )
 
   }
 
@@ -65,15 +68,13 @@ const App = () => {
 
   function addToCart(shoppingItem) {
     //check if item already in cart
-    //const alreadyInCart = 
-    //console.log(shoppingItem.id)
     if (
       cart
       .map(cartItem => cartItem.id)
       .includes(shoppingItem.id)) 
       {
       console.log('already there')
-      addQuantity(shoppingItem.id)
+      changeQuantity(shoppingItem.id, 1)
       } else {
       console.log('new add')
       setCart(prevCart => [...prevCart, shoppingItem])
@@ -82,8 +83,29 @@ const App = () => {
     //setCart(prevCart => [...prevCart, shoppingItem])
     
     console.log(cart)
-    //console.log(alreadyInCart)
   }
+
+  // function addToCart(shoppingItem) {
+  //   //check if item already in cart
+  //   //const alreadyInCart = 
+  //   //console.log(shoppingItem.id)
+  //   if (
+  //     cart
+  //     .map(cartItem => cartItem.id)
+  //     .includes(shoppingItem.id)) 
+  //     {
+  //     console.log('already there')
+  //     addQuantity(shoppingItem.id)
+  //     } else {
+  //     console.log('new add')
+  //     setCart(prevCart => [...prevCart, shoppingItem])
+  //   }
+
+  //   //setCart(prevCart => [...prevCart, shoppingItem])
+    
+  //   console.log(cart)
+  //   //console.log(alreadyInCart)
+  // }
 
   // function addToCart(...shoppingItem) {
   //   //e.preventDefault()
@@ -139,7 +161,7 @@ const App = () => {
           </Route>
 
           <Route path="/cart" >
-            <Cart cart={cart} addQuantity={addQuantity} addToCart={addToCart} />
+            <Cart cart={cart} changeQuantity={changeQuantity} />
           </Route>
 
         </Switch>
