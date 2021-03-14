@@ -13,27 +13,11 @@ import {BrowserRouter as Router, Route, Switch,} from 'react-router-dom'
 
 const App = () => {
 
-  // const test = [
-  //     {
-  //       id: 'big-leafy-boi',
-  //       name: 'Big Leafy Boi',
-  //       imgSource: 'big-leafy-boi.jpg',
-  //       quantity: 1,
-  //       price: 20,
-  //   },
-  //   {
-  //       id: 'small-leafy-boi',
-  //       name: 'Small Leafy Boi',
-  //       imgSource: 'small-leafy-boi.jpg',
-  //       quantity: 1,
-  //       price: 10,
-  //   }
-  // ]
+
   const [cart, setCart] = useState([])
   const [showCart, setShowCart] = useState(false)
   const [totalCost, setTotalCost] = useState(0)
 
-  //const [shoppingItems, setShoppingItems] = useState([...test])
   
   function incCost() {
     setTotalCost(prevTotalCost => prevTotalCost + 1)
@@ -42,16 +26,7 @@ const App = () => {
     //console.log(items)
   }
   
-  // function addQuantity(newItemId) {
-  //   console.log(newItemId)
-  //   setCart(
-  //     cart.map(cartItem => {
-  //         if (cartItem.id === newItemId) {
-  //           cartItem.quantity = cartItem.quantity + 1 
-  //         } else {console.log('add q error')}
 
-  //     }))
-  // }
 
   function changeQuantity (itemId, num) {
     setCart(
@@ -60,12 +35,12 @@ const App = () => {
 
   }
 
-  function addQuantity(newItemId) {
-    console.log(newItemId)
+  // function addQuantity(newItemId) {
+  //   console.log(newItemId)
     
-    cart.map(cartItem => cartItem.id === newItemId ? cartItem.quantity++ : console.log(cartItem.id) )
+  //   cart.map(cartItem => cartItem.id === newItemId ? cartItem.quantity++ : console.log(cartItem.id) )
     
-  }
+  // }
 
   function addToCart(shoppingItem) {
     //check if item already in cart
@@ -86,42 +61,31 @@ const App = () => {
     console.log(cart)
   }
 
+  function removeFromCart(itemId) {
+    console.log('remove below id')
+    console.log(itemId)
+    setCart(
+      cart.filter(cartItem => cartItem.id !== itemId)
+    )
+  }
+
+  // deleteCard = (uid) => {
+  //   console.log('delete-card')
+  //   const remainingCards = this.state.cards.filter(card => {
+  //       return card.id !== uid
+  //   })
+  //   this.setState({
+  //       cards: remainingCards
+  //   })
+  // }
+
+
   //const reducer = (accumulator, currentValue) => accumulator + currentValue;
   //arr.reduce(callback( accumulator, currentValue, [, index[, array]] )[, initialValue])
   const cartQuantity = cart.reduce((accumulator, currentValue) => accumulator + currentValue.quantity, 0)
 
-  // function addToCart(shoppingItem) {
-  //   //check if item already in cart
-  //   //const alreadyInCart = 
-  //   //console.log(shoppingItem.id)
-  //   if (
-  //     cart
-  //     .map(cartItem => cartItem.id)
-  //     .includes(shoppingItem.id)) 
-  //     {
-  //     console.log('already there')
-  //     addQuantity(shoppingItem.id)
-  //     } else {
-  //     console.log('new add')
-  //     setCart(prevCart => [...prevCart, shoppingItem])
-  //   }
 
-  //   //setCart(prevCart => [...prevCart, shoppingItem])
-    
-  //   console.log(cart)
-  //   //console.log(alreadyInCart)
-  // }
-
-  // function addToCart(...shoppingItem) {
-  //   //e.preventDefault()
-  //   const newItem = {...shoppingItem}
-  //   setCart(prevCart => [...prevCart, newItem])
-  //   //prevArr => [...prevArr, card]
-  //   console.log(cart)
-  // }
-
-
-  //const a = [...items]
+  
 
   useEffect(() => {
     console.log('start useEffect...')
@@ -180,7 +144,7 @@ const App = () => {
           />
 
           <Route path="/cart" >
-            <Cart cart={cart} changeQuantity={changeQuantity} />
+            <Cart cart={cart} changeQuantity={changeQuantity} removeFromCart={removeFromCart} />
           </Route>
 
         </Switch>
@@ -188,74 +152,5 @@ const App = () => {
     </Router>
   );
 }
-
-      {/* {items.map(item => {
-                return(
-                    <div key={item.id}>
-                        <p>{item.name}</p>
-                        <p>{item.price}</p>
-                    </div>
-                )
-            })} */}
-
-
-          {/* <Route 
-            path="/shop" 
-            component={Shop}
-            items={shoppingItems}
-              //items={[{items}]}
-              //storeItems={storeItems}
-              // render={(props) => (
-              //   <Shop {...props} items={items} />
-              // )}
-          /> */}
-          {/* { items.map((item) => { return <ShopItem {... item}/> }) } */}
-
-// const App = () => {
-//   return (
-//     <Router>
-//       <div className="App">
-//         <Nav />
-//         <Switch>
-//           <Route exact path="/" component={Home} />
-//           <Route path="/shop" component={Shop} />
-//           <Route path="/cart" component={Cart} />
-//         </Switch>
-//       </div>
-//     </Router>
-//   );
-// }
-
-
-// const Routes = () => {
-
-//   const goHome = () => {
-//       <Link to="/">Home</Link>
-//   }
-
-//   return (
-//       <Router>
-//       <nav>
-//         <ul>
-//           <li>
-//             <Link to="/">Home</Link>
-//           </li>
-//           <li>
-//             <Link to="/profile">profile</Link>
-//           </li>
-//           <li>
-//             <Link to="/users">Users</Link>
-//           </li>
-//         </ul>
-//       </nav>
-//           <button onClick={() => goHome()}>Home</button>
-//           <Switch>
-//               <Route exact path='/' component={App} />
-
-//               <Route path='/profile' component={Profile} />
-//           </Switch>
-//       </Router>
-//   )
-// }
 
 export default App;
