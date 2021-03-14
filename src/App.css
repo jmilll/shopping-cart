@@ -35,7 +35,7 @@ h1 {
 }
 
 a {
-  color: white;
+  color: gray;
 }
 
 /* *** HOME PAGE *** */
@@ -51,6 +51,13 @@ a {
   width: 100%;
   height: 100vh;
   background: honeydew;
+}
+
+/* *** SHOP ITEM PAGE *** */
+.shop-item {
+  width: 100%;
+  height: 100vh;
+  background: rgb(84, 133, 84);
 }
 
 /* *** CART PAGE *** */

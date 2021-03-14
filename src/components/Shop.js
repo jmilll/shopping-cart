@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 
 const Shop = (props) => {
     
@@ -9,10 +9,11 @@ const Shop = (props) => {
    //console.log('props = ' + props)
    // console.log('items = ' + items)
    // console.log('test = ' + testItems)
-   const {items, addToCart} = props
+   const {items, addToCart, testId} = props
 
-   const addToCart2 = () => {
-       console.log('add to cart')
+   const test = (id) => {
+       console.log('test click')
+       console.log(id)
    }
 
 
@@ -28,7 +29,9 @@ const Shop = (props) => {
             {items.map(item => {
                 return(
                     <div key={item.id}>
-                        <p>{item.name}</p>
+                        <Link to={`/shop/${item.id}`} >
+                            <p>{item.name}</p>
+                        </Link>
                         <p>{item.price}</p>
                         {/* <button onClick={() => addToCart({name:item.name, id:item.id, price:item.price})}>Add To Cart</button> */}
 

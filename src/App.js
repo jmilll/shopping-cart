@@ -4,6 +4,7 @@ import './App.css';
 import Cart from './components/Cart';
 import Nav from './components/Nav';
 import Shop from './components/Shop';
+import ShopItem from './components/ShopItem'
 import Home from './components/Home';
 import items from './components/shoppingItems'
 import {BrowserRouter as Router, Route, Switch,} from 'react-router-dom'
@@ -86,7 +87,6 @@ const App = () => {
   }
 
   //const reducer = (accumulator, currentValue) => accumulator + currentValue;
-
   //arr.reduce(callback( accumulator, currentValue, [, index[, array]] )[, initialValue])
   const cartQuantity = cart.reduce((accumulator, currentValue) => accumulator + currentValue.quantity, 0)
 
@@ -140,8 +140,11 @@ const App = () => {
     console.log('end useEffect...')
   }, []);
 
-
-
+  //for rendering shopItemId
+  function findShopItem(id) {
+    items.filter(item => item.id === id)
+  }
+  
   return (
     <Router>
       <div className="App">
@@ -163,8 +166,18 @@ const App = () => {
           />
 
           <Route exact path="/shop">
-            <Shop items={items} addToCart={addToCart}/>
+            <Shop items={items} addToCart={addToCart} />
           </Route>
+
+          <Route 
+          exact path="/shop/:id"
+          render={(routeProps) => 
+            <ShopItem 
+            items={items} 
+            shopItemId={routeProps.match.params.id}
+            addToCart={addToCart}
+            />}
+          />
 
           <Route path="/cart" >
             <Cart cart={cart} changeQuantity={changeQuantity} />

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Cart = (props) => {
     //console.log('cart props below')
@@ -13,7 +14,10 @@ const Cart = (props) => {
             {cart.map(item => {
                 return(
                     <div className={item.name} key={item.id}>
-                        <p>{item.name}</p>
+                        <Link to={`/shop/${item.id}`}>
+                            <p>{item.name}</p>
+                        </Link>
+                        
                         <p>{item.quantity}</p>
                         <button onClick={() => changeQuantity(item.id, -1)} disabled={item.quantity <2}>-</button>
                         <button onClick={() => changeQuantity(item.id, 1)}>+</button>

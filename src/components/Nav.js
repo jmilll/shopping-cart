@@ -17,7 +17,7 @@ const Nav = (props) => {
                     <li>Shop</li>
                 </Link>
                 <Link to="/cart">
-                    <li>Cart {cart.length} Cart Quant = {cartQuantity}</li>
+                    <li>Cart {cartQuantity}</li>
                 </Link>
             </ul>
         </nav>
