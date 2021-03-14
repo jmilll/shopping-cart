@@ -1,8 +1,8 @@
 import React from 'react'
 
 const Cart = (props) => {
-    console.log('cart props below')
-    console.log(props)
+    //console.log('cart props below')
+    //console.log(props)
     const { cart, changeQuantity } = props
     console.log('cart deconstructed props below')
     console.log(cart)

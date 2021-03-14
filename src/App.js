@@ -85,6 +85,11 @@ const App = () => {
     console.log(cart)
   }
 
+  //const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+  //arr.reduce(callback( accumulator, currentValue, [, index[, array]] )[, initialValue])
+  const cartQuantity = cart.reduce((accumulator, currentValue) => accumulator + currentValue.quantity, 0)
+
   // function addToCart(shoppingItem) {
   //   //check if item already in cart
   //   //const alreadyInCart = 
@@ -148,6 +153,7 @@ const App = () => {
         <Nav
           cart={cart}
           totalCost={totalCost}
+          cartQuantity={cartQuantity}
         />
 
         <Switch>

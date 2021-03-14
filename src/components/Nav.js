@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Nav = (props) => {
-    const {totalCost, cart} = props
+    const {totalCost, cart, cartQuantity} = props
+    
     //console.log(props)
     return (
         
@@ -16,7 +17,7 @@ const Nav = (props) => {
                     <li>Shop</li>
                 </Link>
                 <Link to="/cart">
-                    <li>Cart {cart.length}</li>
+                    <li>Cart {cart.length} Cart Quant = {cartQuantity}</li>
                 </Link>
             </ul>
         </nav>
