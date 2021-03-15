@@ -25,7 +25,10 @@ const Cart = (props) => {
             {cart.map(item => {
                 return(
                     <div className='cart-item' key={item.id}>
-                        <img className='image cart' src={item.imgSource} alt={item.id} />
+
+                        <div className='img-container-cart'>
+                            <img className='image cart' src={item.imgSource} alt={item.id} />
+                        </div>
 
                         <Link className='item-link' to={`/shop/${item.id}`}>
                             <p>{item.name}</p>
@@ -49,6 +52,9 @@ const Cart = (props) => {
             <div className='cart-total'>
                 <h2>TOTAL</h2>
                 <h3>{cartTotal}</h3>
+                <Link className='item-link' to='/checkout'>
+                            <button className='btn checkout'>Checkout</button>
+                </Link>
             </div>
 
         </section>

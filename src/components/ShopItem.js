@@ -8,13 +8,15 @@ function ShopItem(props) {
     console.log(shopItem)
 
     return (
-        <div className='shop-item'>
+        <div className='shop-item-page'>
             SHOP ITEM
-            {shopItemId}
-            <img src={shopItem.imgSource} alt={shopItem.name} />
-            <p>{shopItem.name}</p>
-            <p>{shopItem.price}</p>
-            <button onClick={() => addToCart(shopItem)}>Add To Cart</button>
+            {/* {shopItemId} */}
+            <div className='img-container-shop-item'>
+                <img className='image item' src={shopItem.imgSource} alt={shopItem.name} />
+            </div>
+            <p className='shop-item-name'>{shopItem.name}</p>
+            <p className='shop-item-price'>${shopItem.price}</p>
+            <button className='btn add-to-cart' onClick={() => addToCart(shopItem)}>Add To Cart</button>
         </div>
     )
 }

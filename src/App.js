@@ -115,8 +115,8 @@ const App = () => {
       <div className="App">
 
 
-        <button onClick={incCost}>+ Cost</button>
-        <button onClick={() => addToCart('test item')}>+ Cart</button>
+        {/* <button onClick={incCost}>+ Cost</button>
+        <button onClick={() => addToCart('test item')}>+ Cart</button> */}
 
         <Nav
           cart={cart}

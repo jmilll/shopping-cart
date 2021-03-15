@@ -22,20 +22,24 @@ const Shop = (props) => {
         <section className='shop'>
 
             <h1>Shop Page</h1>
-            <p>shopee pagee</p>
 
             {/* {items.map((item) => <ShopItem key={item.id} {...item} />)} */}
 
             {items.map(item => {
                 return(
-                    <div key={item.id}>
-                        <Link to={`/shop/${item.id}`} >
+                    <div className='shop-item' key={item.id}>
+                        <div className='img-container-shop'>
+                            <img className='image shop' src={item.imgSource} alt={item.id} />
+                        </div>
+
+                        <Link className='item-link' to={`/shop/${item.id}`} >
                             <p>{item.name}</p>
                         </Link>
-                        <p>{item.price}</p>
+
+                        <p className='shop-price'>${item.price}</p>
                         {/* <button onClick={() => addToCart({name:item.name, id:item.id, price:item.price})}>Add To Cart</button> */}
 
-                        <button onClick={() => addToCart({...item})}>Add To Cart</button>
+                        <button className='btn add-to-cart' onClick={() => addToCart({...item})}>Add To Cart</button>
                     </div>
                 )
             })}
