@@ -19,17 +19,20 @@ const Shop = (props) => {
 
 
     return (
-        <section className='shop'>
+        <section className='shop-items-container'>
 
-            <h1>Shop Page</h1>
+            {/* <h1>Shop Page</h1> */}
 
             {/* {items.map((item) => <ShopItem key={item.id} {...item} />)} */}
 
+            <div className='shop'>
             {items.map(item => {
                 return(
                     <div className='shop-item' key={item.id}>
                         <div className='img-container-shop'>
+                            <Link to={`/shop/${item.id}`} >
                             <img className='image shop' src={item.imgSource} alt={item.id} />
+                            </Link>
                         </div>
 
                         <Link className='item-link' to={`/shop/${item.id}`} >
@@ -53,7 +56,9 @@ const Shop = (props) => {
                     </div>
                 )
             })} */}
+            </div>
         </section>
+        
     )
 }
 
