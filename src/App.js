@@ -20,12 +20,12 @@ const App = () => {
   const [totalCost, setTotalCost] = useState(0)
 
   
-  function incCost() {
-    setTotalCost(prevTotalCost => prevTotalCost + 1)
-    //setScore((prevScore) => prevScore + 1)
-    console.log(totalCost)
-    //console.log(items)
-  }
+  // function incCost() {
+  //   setTotalCost(prevTotalCost => prevTotalCost + 1)
+  //   //setScore((prevScore) => prevScore + 1)
+  //   console.log(totalCost)
+  //   //console.log(items)
+  // }
   
 
 

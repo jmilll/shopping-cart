@@ -12,7 +12,7 @@ const Nav = (props) => {
                 <h3 className='logo'>Leafybois</h3>
             </Link>
             <ul className='nav-links'>
-                <Link to="/shop">
+                <Link className='shop-link' to="/shop">
                     <li>Shop</li>
                 </Link>
                 <Link to="/cart">

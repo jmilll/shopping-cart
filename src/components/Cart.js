@@ -19,7 +19,9 @@ const Cart = (props) => {
   //const cartQuantity = cart.reduce((accumulator, currentValue) => accumulator + currentValue.quantity, 0)
 
     return (
-        <section className='cart'>
+        <section className='page-container cart'>
+
+            <div className='cart'>
             <h1>Cart Page</h1>
 
             {cart.map(item => {
@@ -56,7 +58,7 @@ const Cart = (props) => {
                             <button className='btn checkout'>Checkout</button>
                 </Link>
             </div>
-
+            </div>
         </section>
     )
 }

@@ -19,7 +19,7 @@ const Shop = (props) => {
 
 
     return (
-        <section className='shop-items-container'>
+        <section className='page-container shop'>
 
             {/* <h1>Shop Page</h1> */}
 
