@@ -12,6 +12,8 @@ const Cart = (props) => {
         cart.map(item => item.price * item.quantity)
         .reduce((accumulator, currentValue) => accumulator + currentValue, 0)
 
+    const itemTotal = (cost, quantity) => cost * quantity
+
   //const reducer = (accumulator, currentValue) => accumulator + currentValue;
   //arr.reduce(callback( accumulator, currentValue, [, index[, array]] )[, initialValue])
   //const cartQuantity = cart.reduce((accumulator, currentValue) => accumulator + currentValue.quantity, 0)
@@ -22,21 +24,32 @@ const Cart = (props) => {
 
             {cart.map(item => {
                 return(
-                    <div className={item.name} key={item.id}>
-                        <Link to={`/shop/${item.id}`}>
+                    <div className='cart-item' key={item.id}>
+                        <img className='image cart' src={item.imgSource} alt={item.id} />
+
+                        <Link className='item-link' to={`/shop/${item.id}`}>
                             <p>{item.name}</p>
                         </Link>
                         
-                        <p>${item.price} X {item.quantity}</p>
-                        <button onClick={() => changeQuantity(item.id, -1)} disabled={item.quantity <2}>-</button>
-                        <button onClick={() => changeQuantity(item.id, 1)}>+</button>
-                        <button onClick={() => removeFromCart(item.id)}>Remove From Cart</button>
+                        <p>${item.price}</p>
+
+                        <div className='quantity-wrapper'>
+                            <button className='btn qty' onClick={() => changeQuantity(item.id, -1)} disabled={item.quantity <2}>-</button>
+                            <p>{item.quantity}</p>
+                            <button className='btn qty' onClick={() => changeQuantity(item.id, 1)}>+</button>
+                        </div>
+
+                        <p className='sub-total'>Subtotal ${itemTotal(item.price, item.quantity)}</p>
+
+                        <button className='btn remove' onClick={() => removeFromCart(item.id)}>Remove From Cart</button>
                     </div>
                 )
             })}
 
-            <h2>TOTAL</h2>
-            <h3>{cartTotal}</h3>
+            <div className='cart-total'>
+                <h2>TOTAL</h2>
+                <h3>{cartTotal}</h3>
+            </div>
 
         </section>
     )

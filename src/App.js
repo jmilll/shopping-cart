@@ -1,6 +1,7 @@
 //import logo from './logo.svg';
 import { useState, useEffect } from 'react';
 import './App.css';
+import Checkout from './components/Checkout'
 import Cart from './components/Cart';
 import Nav from './components/Nav';
 import Shop from './components/Shop';
@@ -146,6 +147,11 @@ const App = () => {
           <Route path="/cart" >
             <Cart cart={cart} changeQuantity={changeQuantity} removeFromCart={removeFromCart} />
           </Route>
+
+          <Route 
+            path="/checkout" 
+            component={Checkout} 
+          />
 
         </Switch>
       </div>
