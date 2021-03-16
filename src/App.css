@@ -38,8 +38,10 @@ a:hover {
 }
 
 .btn {
-  padding: .5rem 1rem;
-  font-size: .8em;
+  /* padding: .5rem 1rem;
+  font-size: .8em; */
+  padding: .7rem 1.2rem;
+  font-size: .9em;
   text-transform: inherit;
   background: none;
   cursor: pointer;
@@ -221,9 +223,14 @@ img.image.shop:hover {
 
 /* ****** ************** ****** */
 /* ****** SHOP ITEM PAGE ****** */
+.page-container.item {
+  /* subtract right side per .shop-item right margin */
+  margin: 13rem 3rem 0 3rem;
+}
+
 .shop-item-page {
-  height: 100vh;
-  background: linear-gradient(to right, #a5d6a7, #009688);;
+  height: 80vh;
+  /* background: linear-gradient(to right, #a5d6a7, #009688); */
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -235,14 +242,42 @@ img.image.item {
 
 .img-container-shop-item {
   background: black;
-  width: 700px;
-  height: 70%;
+  /* width: 700px; */
+  width: 30%;
+  min-width: 400px;
+  height: 90%;
 }
 
 .shop-item-info.item {
-
+  margin: 7rem 0 0 5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-self: flex-start;
+  width: 30%;
+  min-width: 300px;
+  text-align: left;
 }
 
+.shop-item-name {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.shop-item-desc {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 2rem 0;
+}
+
+.shop-item-price {
+  font-size: 1.2em;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.btn.add-to-cart.item {
+  margin-top: 3rem;
+}
 
 .filler-1 {
   background: linear-gradient(to left, #d2a5d6, #7c9600);

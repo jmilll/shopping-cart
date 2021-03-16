@@ -14,11 +14,15 @@ function ShopItem(props) {
                 <img className='image item' src={shopItem.imgSource} alt={shopItem.name} />
             </div>
             <div className='shop-item-info item'>
-                <div className='name-price-wrapper'>
+                {/* <div className='name-price-wrapper'> */}
                     <p className='shop-item-name'>{shopItem.name}</p>
+                    <p className='shop-item-desc'>
+                    {shopItem.name}, spent thier entire life soaking up some sicc rays while choking down used air. You can bring them home to clean your air for free and bring you maximum happiness.
+
+                    </p>
                     <p className='shop-item-price'>${shopItem.price}</p>
-                </div>
-                <button className='btn add-to-cart' onClick={() => addToCart(shopItem)}>Add To Cart</button>
+                {/* </div> */}
+                <button className='btn add-to-cart item' onClick={() => addToCart(shopItem)}>Add To Cart</button>
             </div>
         </div>
         </section>
