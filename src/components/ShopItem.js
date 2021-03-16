@@ -24,6 +24,9 @@ function ShopItem(props) {
                 {/* </div> */}
                 <button className='btn add-to-cart item' onClick={() => addToCart(shopItem)}>Add To Cart</button>
             </div>
+            <span className='filler-1'></span>
+            <span className='filler-2'></span>
+
         </div>
         </section>
     )

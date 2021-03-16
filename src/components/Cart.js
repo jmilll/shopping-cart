@@ -22,7 +22,12 @@ const Cart = (props) => {
         <section className='page-container cart'>
 
             <div className='cart'>
-            <h1>Cart Page</h1>
+            <h1>MY CART</h1>
+            <div className='header'>
+                <p>Item</p>
+                <p>Quantity</p>
+                <p>Subtotal</p>
+            </div>
 
             {cart.map(item => {
                 return(
@@ -32,21 +37,32 @@ const Cart = (props) => {
                             <img className='image cart' src={item.imgSource} alt={item.id} />
                         </div>
 
+
                         <Link className='item-link' to={`/shop/${item.id}`}>
                             <p>{item.name}</p>
                         </Link>
+
+                        {/* <div>
+                            <Link className='item-link' to={`/shop/${item.id}`}>
+                                <p>{item.name}</p>
+                            </Link>
+                            <p className='cart-item-price'>${item.price}</p>
+                        </div> */}
                         
-                        <p>${item.price}</p>
 
                         <div className='quantity-wrapper'>
                             <button className='btn qty' onClick={() => changeQuantity(item.id, -1)} disabled={item.quantity <2}>-</button>
-                            <p>{item.quantity}</p>
+                            <p className='quantity'>{item.quantity}</p>
                             <button className='btn qty' onClick={() => changeQuantity(item.id, 1)}>+</button>
                         </div>
 
-                        <p className='sub-total'>Subtotal ${itemTotal(item.price, item.quantity)}</p>
+                        {/* <p className='sub-total'>Subtotal ${itemTotal(item.price, item.quantity)}</p> */}
 
-                        <button className='btn remove' onClick={() => removeFromCart(item.id)}>Remove From Cart</button>
+                        <div>
+                            <p className='sub-total'>Subtotal ${itemTotal(item.price, item.quantity)}</p>
+                            <p className='sub-price'>(${item.price} / each)</p>
+                        </div>
+                        <button className='btn remove' onClick={() => removeFromCart(item.id)}>Remove</button>
                     </div>
                 )
             })}
