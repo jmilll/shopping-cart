@@ -22,26 +22,27 @@ const Cart = (props) => {
         <section className='page-container cart'>
 
             <div className='cart'>
-            <h1>MY CART</h1>
-            <div className='header'>
-                <p>Item</p>
+            <h1>MY SHOPPING CART</h1>
+            <span className='header'>
+                {/* <p>Item</p>
                 <p>Quantity</p>
-                <p>Subtotal</p>
-            </div>
+                <p>Subtotal</p> */}
+            </span>
 
             {cart.map(item => {
                 return(
                     <div className='cart-item' key={item.id}>
+                        {/* <div className='cart-item-info'> */}
+                            <div className='img-container-cart'>
+                                <img className='image cart' src={item.imgSource} alt={item.id} />
+                            </div>
 
-                        <div className='img-container-cart'>
-                            <img className='image cart' src={item.imgSource} alt={item.id} />
-                        </div>
 
-
-                        <Link className='item-link' to={`/shop/${item.id}`}>
-                            <p>{item.name}</p>
-                        </Link>
-
+                            <Link className='item-link cart' to={`/shop/${item.id}`}>
+                                <p>{item.name}</p>
+                                
+                            </Link>
+                        {/* </div> */}
                         {/* <div>
                             <Link className='item-link' to={`/shop/${item.id}`}>
                                 <p>{item.name}</p>
@@ -68,10 +69,14 @@ const Cart = (props) => {
             })}
 
             <div className='cart-total'>
-                <h2>TOTAL</h2>
-                <h3>{cartTotal}</h3>
-                <Link className='item-link' to='/checkout'>
-                            <button className='btn checkout'>Checkout</button>
+                <Link className='back-link' to='/shop'>
+                    <button className='btn back'>Forgot Something?</button>
+                </Link>
+
+                <h2>TOTAL ${cartTotal}</h2>
+
+                <Link className='checkout-link' to='/checkout'>
+                    <button className='btn checkout'>Checkout</button>
                 </Link>
             </div>
             </div>
