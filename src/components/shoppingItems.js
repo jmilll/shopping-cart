@@ -27,6 +27,35 @@ const items = [
         quantity: 1,
         price: 70,
     },
+    {
+        id: 'yellow-flower',
+        name: 'Yellow Flower',
+        imgSource: 'https://media.urbanstems.com/image/upload/f_auto/w_900,c_fit,q_80/Catalogs/urbanstems-master/VDAY%202021/Ethel/Ethel_Top.jpg',
+        quantity: 1,
+        price: 48,
+    },
+    {
+        id: 'fuzzy-fingers',
+        name: 'Fuzzy Fingers',
+        imgSource: 'https://media.urbanstems.com/image/upload/f_auto/w_900,c_fit,q_80/Catalogs/urbanstems-master/the-winona/Winona_Top.jpg',
+        quantity: 1,
+        price: 55,
+    },
+    {
+        id: 'prickley-boi',
+        name: 'Prickley Boi',
+        imgSource: 'https://media.urbanstems.com/image/upload/f_auto/w_900,c_fit,q_80/Catalogs/urbanstems-master/The%20Sonoran/Sonoran_Top.jpg',
+        quantity: 1,
+        price: 60,
+    },
+    {
+        id: 'lover-boi',
+        name: 'Lover Boi',
+        imgSource: 'https://media.urbanstems.com/image/upload/f_auto/w_900,c_fit,q_80/Catalogs/urbanstems-master/The%20Cora/Cora_Top.jpg',
+        quantity: 1,
+        price: 35,
+    },
+
 ]
 
 export default items

@@ -10,14 +10,16 @@ function ShopItem(props) {
     return (
         <section className='page-container item'>
         <div className='shop-item-page'>
-            SHOP ITEM
-            {/* {shopItemId} */}
             <div className='img-container-shop-item'>
                 <img className='image item' src={shopItem.imgSource} alt={shopItem.name} />
             </div>
-            <p className='shop-item-name'>{shopItem.name}</p>
-            <p className='shop-item-price'>${shopItem.price}</p>
-            <button className='btn add-to-cart' onClick={() => addToCart(shopItem)}>Add To Cart</button>
+            <div className='shop-item-info item'>
+                <div className='name-price-wrapper'>
+                    <p className='shop-item-name'>{shopItem.name}</p>
+                    <p className='shop-item-price'>${shopItem.price}</p>
+                </div>
+                <button className='btn add-to-cart' onClick={() => addToCart(shopItem)}>Add To Cart</button>
+            </div>
         </div>
         </section>
     )

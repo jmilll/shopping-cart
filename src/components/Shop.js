@@ -34,15 +34,16 @@ const Shop = (props) => {
                             <img className='image shop' src={item.imgSource} alt={item.id} />
                             </Link>
                         </div>
+                        <div className='shop-item-info'>
+                            <div className='name-price-wrapper'>
+                                <Link className='item-link' to={`/shop/${item.id}`} >
+                                    <p>{item.name}</p>
+                                </Link>
 
-                        <Link className='item-link' to={`/shop/${item.id}`} >
-                            <p>{item.name}</p>
-                        </Link>
-
-                        <p className='shop-price'>${item.price}</p>
-                        {/* <button onClick={() => addToCart({name:item.name, id:item.id, price:item.price})}>Add To Cart</button> */}
-
-                        <button className='btn add-to-cart' onClick={() => addToCart({...item})}>Add To Cart</button>
+                                <p className='shop-price'>${item.price}</p>
+                            </div>
+                            <button className='btn add-to-cart' onClick={() => addToCart({...item})}>Add To Cart</button>
+                        </div>
                     </div>
                 )
             })}

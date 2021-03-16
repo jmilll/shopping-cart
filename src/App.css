@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
 
+
+
 body {
   background-color: white;
   /* font-family: 'Roboto', sans-serif; */
@@ -10,6 +12,8 @@ body {
 
   --dark-bkg: #212321;
   --light-text-color: white;
+  --margin: 2rem;
+  
 }
 
 .App {
@@ -20,6 +24,52 @@ h1 {
   margin: 0;
 }
 
+p {
+  margin: 0;
+}
+
+a {
+  color: rgb(30,30,30);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: line-through;
+}
+
+.btn {
+  padding: .5rem 1rem;
+  font-size: .8em;
+  text-transform: inherit;
+  background: none;
+  cursor: pointer;
+
+  box-shadow: inset 0 0 0 0 black;
+  -webkit-transition: ease-out 0.3s;
+  -moz-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+
+.btn:hover {
+  color: white;
+  background-color: black;
+  box-shadow: inset 0 0 0 50px black;
+}
+  .slide_right:hover {
+    box-shadow: inset 400px 0 0 0 #D80286;
+  }
+  .slide_inside:hover {
+    box-shadow: inset 0 0 0 50px #D80286;
+  }
+  .slide_diagonal:hover {
+    box-shadow: inset 400px 50px 0 0 #D80286;
+  }
+
+
+
+
+
+
 img.image {
   background-color: aqua;
   width: 100%;
@@ -29,12 +79,13 @@ img.image {
 
 .page-container {
   /* subtract right side per .shop-item right margin */
-  margin: 10rem 1rem 2rem 2rem;
+  margin: 12rem 3rem 5rem 3rem;
 }
 
-/* *** NAV *** */
+/* ****** *** ****** */
+/* ****** NAV ****** */
 .nav {
-  background-color: rgb(33 35 33 / 10%);
+  background-color: rgb(33 35 33 / 5%);
   color: white;
   display: flex;
   flex-flow: row wrap;
@@ -75,11 +126,9 @@ img.image {
   margin: 0 auto;
 }
 
-a {
-  color: rgb(30,30,30);
-  text-decoration: none;
-}
 
+
+/* ****** *** ****** */
 /* *** HOME PAGE *** */
 .home {
   width: 100%;
@@ -87,17 +136,19 @@ a {
   background: goldenrod;
 }
 
+/* ****** ********* ****** */
+/* ****** SHOP PAGE ****** */
 
-/* *** SHOP PAGE *** */
+
 
 .page-container.shop {
   /* subtract right side per .shop-item right margin */
-  margin: 10rem 1rem 2rem 2rem;
+  margin: 12rem calc(3rem - var(--margin)) 5rem 3rem;
 }
 
 .shop {
-  height: 100vh;
-  background: honeydew;
+  /* height: 100vh; */
+  /* background: honeydew; */
   display: flex;
   flex-flow: row wrap;
 
@@ -119,31 +170,63 @@ a {
 
 .shop-item {
   /* height: calc((100% / 2) - 1rem); */
-  height: calc((100vw / 3) - 1rem);
-  width: calc((100% / 4) - 1rem);
+  height: calc((100vw / 3) - var(--margin));
+  width: calc((100% / 4) - var(--margin));
   min-width: 500px;
-  background: pink;
-  margin: 0 1rem 1rem 0;
+  /* background: pink; */
+  margin: 0 var(--margin) var(--margin) 0;
 }
 
-img.image.shop {
+.shop-item:hover {
+  box-sizing: border-box;
+  outline: 5px solid black;
+  outline-offset: 10px;
+  
+  /* transition: ease 0.2s; */
+  transition: cubic-bezier(0.18, 0.89, 0.43, 0.99) 0.2s;
+}
+
+img.image.shop:hover {
 
 }
 
 .img-container-shop{
   background: rgb(155, 47, 137);
   width: 100%;
-  height: 100%;
+  height:90%;
+}
+
+.shop-item-info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: .7rem;
+
+  font-size: 1.3em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.name-price-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+
+.shop-price {
+  margin: 0;
 }
 
 
-/* *** SHOP ITEM PAGE *** */
+/* ****** ************** ****** */
+/* ****** SHOP ITEM PAGE ****** */
 .shop-item-page {
   height: 100vh;
   background: linear-gradient(to right, #a5d6a7, #009688);;
   display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
 }
 
 img.image.item {
@@ -156,7 +239,35 @@ img.image.item {
   height: 70%;
 }
 
-/* *** CART PAGE *** */
+.shop-item-info.item {
+
+}
+
+
+.filler-1 {
+  background: linear-gradient(to left, #d2a5d6, #7c9600);
+    width: 50%;
+    height: 10%;
+    position: absolute;
+    z-index: -2;
+    top: 20%;
+    left: 10%;
+}
+
+.filler-2 {
+  background: linear-gradient(to right, #a5d6a7, #009688);
+    width: 30%;
+    height: 50%;
+    position: absolute;
+    z-index: -1;
+    top: 40%;
+    left: 20%;
+}
+
+
+
+/* ****** ********* ****** */
+/* ****** CART PAGE ****** */
 .cart {
   /* height: 100vh; */
   background: lightblue;
