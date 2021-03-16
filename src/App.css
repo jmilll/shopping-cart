@@ -87,7 +87,7 @@ img.image {
 /* ****** *** ****** */
 /* ****** NAV ****** */
 .nav {
-  background: linear-gradient(180deg, white, rgb(255 255 255 / 70%));
+  background: none;
   color: white;
   display: flex;
   flex-flow: row wrap;
@@ -98,6 +98,10 @@ img.image {
   top: 0;
   left: 0;
   right: 0;
+}
+
+.nav:hover {
+  background: linear-gradient(180deg, white, rgb(255 255 255 / 70%));
 }
 
 .logo {
@@ -136,6 +140,34 @@ img.image {
   width: 100%;
   height: 100vh;
   background: goldenrod;
+  
+}
+
+.item-link-shop {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 45%;
+}
+
+.btn.enter {
+  background: #ccdeee;
+  color: #1e1e1e;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 2rem 3rem;
+  border: none;
+  outline: 10px solid #ccdeee;
+  outline-offset: 10px;
+  letter-spacing: 5px;
+  box-shadow: inset 0 0 0 0 #79969a;
+}
+
+.btn.enter:hover {
+color: white;
+background-color: #79969a;
+box-shadow: inset 0 0 0 50px #79969a;
 }
 
 /* ****** ********* ****** */
