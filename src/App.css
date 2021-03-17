@@ -1,19 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
-
-
 
 body {
   background-color: white;
-  /* font-family: 'Roboto', sans-serif; */
   font-family: 'Montserrat', sans-serif;
   margin: 0;
 
   --dark-bkg: #212321;
   --light-text-color: white;
   --margin: 2rem;
-  
 }
 
 .App {
@@ -40,8 +35,6 @@ a:hover {
 }
 
 .btn {
-  /* padding: .5rem 1rem;
-  font-size: .8em; */
   padding: .7rem 1.2rem;
   font-size: .9em;
   text-transform: inherit;
@@ -59,20 +52,6 @@ a:hover {
   background-color: black;
   box-shadow: inset 0 0 0 50px black;
 }
-  .slide_right:hover {
-    box-shadow: inset 400px 0 0 0 #D80286;
-  }
-  .slide_inside:hover {
-    box-shadow: inset 0 0 0 50px #D80286;
-  }
-  .slide_diagonal:hover {
-    box-shadow: inset 400px 50px 0 0 #D80286;
-  }
-
-
-
-
-
 
 img.image {
   background-color: aqua;
@@ -88,6 +67,7 @@ img.image {
 
 /* ****** *** ****** */
 /* ****** NAV ****** */
+
 .nav {
   background: none;
   color: white;
@@ -103,16 +83,11 @@ img.image {
   right: 0;
 }
 
-/* .nav:hover {
-  background: linear-gradient(180deg, white, rgb(255 255 255 / 70%));
-} */
-
 .logo {
   margin: 0;
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 7em;
-  /* font-style: italic; */
   text-transform: uppercase;
   letter-spacing: 0px;
 }
@@ -152,8 +127,10 @@ ul.nav-links a {
   right: 35%;
 }
 
+
 /* ****** *** ****** */
 /* *** HOME PAGE *** */
+
 .home {
   width: 100%;
   height: 100vh;
@@ -197,10 +174,9 @@ box-shadow: inset 0 0 0 50px #79969a;
 outline: none;
 }
 
+
 /* ****** ********* ****** */
 /* ****** SHOP PAGE ****** */
-
-
 
 .page-container.shop {
   /* subtract right side per .shop-item right margin */
@@ -208,17 +184,13 @@ outline: none;
 }
 
 .shop {
-  /* height: 100vh; */
-  /* background: honeydew; */
   display: flex;
   flex-flow: row wrap;
-
   justify-content: center;
 }
 
 .shop2 {
   height: 100vh;
-  background: honeydew;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -230,11 +202,9 @@ outline: none;
 }
 
 .shop-item {
-  /* height: calc((100% / 2) - 1rem); */
   height: calc((100vw / 3) - var(--margin));
   width: calc((100% / 4) - var(--margin));
   min-width: 500px;
-  /* background: pink; */
   margin: 0 var(--margin) var(--margin) 0;
 }
 
@@ -242,13 +212,7 @@ outline: none;
   box-sizing: border-box;
   outline: 5px solid black;
   outline-offset: 10px;
-  
-  /* transition: ease 0.2s; */
   transition: cubic-bezier(0.18, 0.89, 0.43, 0.99) 0.2s;
-}
-
-img.image.shop:hover {
-
 }
 
 .img-container-shop{
@@ -282,6 +246,7 @@ img.image.shop:hover {
 
 /* ****** ************** ****** */
 /* ****** SHOP ITEM PAGE ****** */
+
 .page-container.item {
   /* subtract right side per .shop-item right margin */
   margin: 13rem 3rem 0 3rem;
@@ -289,20 +254,13 @@ img.image.shop:hover {
 
 .shop-item-page {
   height: 80vh;
-  
-  /* background: linear-gradient(to right, #a5d6a7, #009688); */
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
 }
 
-img.image.item {
-
-}
-
 .img-container-shop-item {
   background: black;
-  /* width: 700px; */
   width: 30%;
   min-width: 400px;
   height: 90%;
@@ -361,7 +319,6 @@ img.image.item {
 }
 
 
-
 /* ****** ********* ****** */
 /* ****** CART PAGE ****** */
 
@@ -370,12 +327,6 @@ img.image.item {
   min-width: 600px;
   margin-bottom: 12rem;
 } 
-
-.cart {
-  /* height: 100vh; */
-  /* background: lightblue; */
-}
-
 
 div.cart h1 {
   font-size: 2em;
@@ -417,7 +368,6 @@ div.cart h1 {
 
 /* ****** NORMAL CART ****** */
 .cart-item {
-  /* background-color: yellowgreen; */
   height: 180px;
   display: flex;
   flex-flow: row nowrap;
@@ -429,10 +379,6 @@ div.cart h1 {
   text-transform: uppercase;
   font-size: 1.5em;
 }
-
-/* .cart-item-info {
-  display: flex;
-} */
 
 img.image.cart {
   
@@ -462,8 +408,6 @@ img.image.cart {
 .quantity {
   padding: .5rem 1.5rem;
   font-weight: 600;
-  /* border-top: 1px solid black; */
-  /* border-bottom: 1px solid black;*/
 }
 
 .btn.qty {
@@ -495,7 +439,6 @@ img.image.cart {
   bottom: 0;
   left: 0;
   right: 0;
-  /* background: antiquewhite; */
   border-top: 5px solid black;
 
   display: flex;
@@ -538,6 +481,7 @@ div.cart-total h2 {
 
 /* ****** ********* ****** */
 /* ****** CHECKOUT PAGE ****** */
+
 .checkout {
   margin-top: 15%;
 }
