@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 const Home = () => {
     return (
         <div className='home'>
+            <span className='white-cover'></span>
             <Link className='item-link-shop' to={`/shop`}>
                 <button className='btn enter'>Step Inside The Greenhouse</button>
                 
@@ -15,4 +16,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Home    
