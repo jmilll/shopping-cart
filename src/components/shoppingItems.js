@@ -1,3 +1,14 @@
+//In case need to use saved images
+// src/images/big-leafy-boi.jpg
+// src/images/fuzzy-fingers.jpg
+// src/images/greenhouse-main.jpg
+// src/images/lover-boi.jpg
+// src/images/og-leafy-boi.jpg
+// src/images/prickley-boi.jpg
+// src/images/shiney-piney.jpg
+// src/images/small-leafy-boi.jpg
+// src/images/white-and-waxy.jpg
+
 const items = [
     {
         id: 'og-leafy-boi',
