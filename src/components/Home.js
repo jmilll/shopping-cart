@@ -9,7 +9,7 @@ const Home = () => {
                 <button className='btn enter'>Step Inside The Greenhouse</button>
             </Link>
             
-            <img className='image' src='https://yardyum.com/storage/app/media/Greenhouse%20with%20Vegetables.jpg'/>
+            <img className='image' src='https://yardyum.com/storage/app/media/Greenhouse%20with%20Vegetables.jpg' alt='greenhouse-background' />
         </div>
     )
 }
