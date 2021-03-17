@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 const Nav = (props) => {
     const { cartQuantity } = props
     
-    //console.log(props)
     return (
         
         <nav className='nav'>
