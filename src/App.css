@@ -131,11 +131,26 @@ img.image {
   text-transform: uppercase;
 }
 
+ul.nav-links a {
+  position: relative;
+}
+
 .shop-link {
   margin: 0 auto;
 }
 
+.cart-icon {
+  width: 50px;
+  height: 50px;
+  color: black;
+}
 
+.cart-qty {
+  position: absolute;
+  z-index: 6;
+  top: 33%;
+  right: 35%;
+}
 
 /* ****** *** ****** */
 /* *** HOME PAGE *** */

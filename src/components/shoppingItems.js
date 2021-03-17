@@ -1,35 +1,35 @@
 const items = [
     {
-        id: 'big-leafy-boi',
-        name: 'Big Leafy Boi',
+        id: 'og-leafy-boi',
+        name: 'OG Leafy Boi',
         imgSource: 'https://media.urbanstems.com/image/upload/f_auto/w_900,c_fit,q_80/Catalogs/urbanstems-master/Spring21/Bohen/Bohen_Top.jpg',
         quantity: 1,
-        price: 20,
+        price: 39,
     },
     {
         id: 'small-leafy-boi',
         name: 'Small Leafy Boi',
         imgSource: 'https://media.urbanstems.com/image/upload/f_auto/w_900,c_fit,q_80/Catalogs/urbanstems-master/VDAY%202021/Loe/Loe_top.jpg',
         quantity: 1,
-        price: 10,
+        price: 15,
     },
     {
-        id: 'medium-droopy-tree',
-        name: 'Medium Droopy Tree',
+        id: 'white-and-waxy',
+        name: 'White and Waxy',
         imgSource: 'https://media.urbanstems.com/image/upload/f_auto/w_900,c_fit,q_80/Catalogs/urbanstems-master/The%20Affogato/Affogoto_Carousel_2.jpg',
         quantity: 1,
         price: 50,
     },
     {
-        id: 'tall-pointy-tree',
-        name: 'Tall PointyTree',
+        id: 'big-leafy-boi',
+        name: 'Big Leafy Boi',
         imgSource: 'https://media.urbanstems.com/image/upload/f_auto/w_900,c_fit,q_80/Catalogs/urbanstems-master/The%20Fiddle/Fiddle_Top_New.jpg',
         quantity: 1,
-        price: 70,
+        price: 64,
     },
     {
-        id: 'yellow-flower',
-        name: 'Yellow Flower',
+        id: 'sunshiny-piney',
+        name: 'Sunshiny Piney',
         imgSource: 'https://media.urbanstems.com/image/upload/f_auto/w_900,c_fit,q_80/Catalogs/urbanstems-master/VDAY%202021/Ethel/Ethel_Top.jpg',
         quantity: 1,
         price: 48,
@@ -46,7 +46,7 @@ const items = [
         name: 'Prickley Boi',
         imgSource: 'https://media.urbanstems.com/image/upload/f_auto/w_900,c_fit,q_80/Catalogs/urbanstems-master/The%20Sonoran/Sonoran_Top.jpg',
         quantity: 1,
-        price: 60,
+        price: 59,
     },
     {
         id: 'lover-boi',
@@ -59,34 +59,3 @@ const items = [
 ]
 
 export default items
-
-// export default [
-//     {
-//         id: 'big-leafy-boi',
-//         name: 'Big Leafy Boi',
-//         imgSource: 'big-leafy-boi.jpg',
-//         quantity: 1,
-//         price: 20,
-//     },
-//     {
-//         id: 'small-leafy-boi',
-//         name: 'Small Leafy Boi',
-//         imgSource: 'small-leafy-boi.jpg',
-//         quantity: 1,
-//         price: 10,
-//     },
-//     {
-//         id: 'medium-droopy-tree',
-//         name: 'Medium Droopy Tree',
-//         imgSource: 'medium-droopy-tree.jpg',
-//         quantity: 1,
-//         price: 50,
-//     },
-//     {
-//         id: 'tall-pointy-tree',
-//         name: 'Tall PointyTree',
-//         imgSource: 'tall-pointy-tree.jpg',
-//         quantity: 1,
-//         price: 70,
-//     },
-// ]

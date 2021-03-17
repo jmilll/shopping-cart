@@ -70,7 +70,7 @@ const Cart = (props) => {
 
             <div className='cart-total'>
                 <Link className='back-link' to='/shop'>
-                    <button className='btn back'>Forgot Something?</button>
+                    <button className='btn back'>Add More Plants?</button>
                 </Link>
 
                 <h2>TOTAL ${cartTotal}</h2>
