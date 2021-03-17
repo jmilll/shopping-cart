@@ -629,4 +629,29 @@ div.cart-total h2 {
 
 /* ****** CART PAGE ****** */
 
+.page-container.cart {
+  padding: 0;
+  min-width: 100px;
+  margin-bottom: 0;
+}
+
+.cart-item {
+  padding: 0;
+  flex-flow: row wrap;
+    justify-content: space-between;
+    height: auto;
+}
+
+.img-container-cart {
+  width: 40%;
+}
+.item-link.cart {
+  width: 50%;
+}
+.quantity-wrapper {
+  width: 40%;
+  justify-content: space-between;
+}
+
+
 }
