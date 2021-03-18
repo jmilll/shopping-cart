@@ -63,7 +63,8 @@ const App = () => {
         />
 
         <Switch>
-          <Route exact path="/" component={Home} />
+          {/* change path from "/" for gh-pages deployment */}
+          <Route exact path="/shopping-cart" component={Home} />
 
           <Route exact path="/shop">
             <Shop items={items} addToCart={addToCart} />
